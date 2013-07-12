@@ -1,6 +1,5 @@
 
 
-
        
 	    
             
@@ -237,14 +236,14 @@ div#invlist{  margin: 0px 20px 0px 20px;  display: none;}
 
 <form name="resortFlow2a" method="post">
 <input type="hidden" name="seq" value="1"/>
-<input type="hidden" name="sui" value="101001086389">
-<input type="hidden" name="clubCode" value="XX">
-<input type="hidden" name="firstName" value="margaret">
+<input type="hidden" name="sui" value="">
+<input type="hidden" name="clubCode" value="">
+<input type="hidden" name="firstName" value="">
 <input type="hidden" name="hotelCode" value="">
-<input type="hidden" name="lastName" value="beard">
-<input type="hidden" name="email" value="rembry@gmail.com">
-<input type="hidden" name="memberID" value="AZ3000933400">
-<input type="hidden" name="memberType" value="member">
+<input type="hidden" name="lastName" value="">
+<input type="hidden" name="email" value="">
+<input type="hidden" name="memberID" value="">
+<input type="hidden" name="memberType" value="">
 <input type="hidden" name="type" value="resort">
 <input type="hidden" name="pageId" value="inventorySearch">
 <input type="hidden" name="firstDisplay" value="true"/>
