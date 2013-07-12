@@ -1,0 +1,99 @@
+banImages=new Array("images/obeportal/mast_02.jpg","images/obeportal/mast_02b.jpg","images/obeportal/mast_02c.jpg")
+currentLayers=new Array(1,1)
+thisBan=0
+imgCt=banImages.length
+var preloadFlag=true;function setPage(newAddress){if(newAddress!=""){document.location.href=newAddress;}}
+function rotate(){if(document.images&&document.mast02){if(document.mast02.complete){thisBan++
+if(thisBan==imgCt){thisBan=0}
+document.mast02.src=banImages[thisBan]}
+setTimeout("rotate()",7000);}}
+function popUpSecuritySeal(url){sealWin=window.open(url,"win",'toolbar=0,location=0,directories=0,status=1,menubar=1,scrollbars=1,resizable=1,width=650,height=500');self.name="mainWin";}
+function popupWin(url){win1=window.open(url,"Mfee_Window","titlebar=0,width=700,height=700,scrollbars,resizable=0");}
+function setPage(newAddress){if(newAddress!=""){document.location.href=newAddress;}}
+function submitForm(fld,val){if(document.SubForm.elements[fld]){document.SubForm.elements[fld].value=val;document.SubForm.submit();}}
+function submitFormEvent(evnt){document.SubForm.action=evnt;document.SubForm.submit();}
+function setBookmark(val){if(document.SubForm.elements['BookmarkValue']){document.SubForm.elements['BookmarkValue'].value=val;document.SubForm.elements['Evt'].value='Bookmark';document.SubForm.submit();}}
+function openVFWin(sEvent)
+{var URLtoOpen='';URLtoOpen=sEvent;setPage('/GetResortScreen.event');win1=window.open(URLtoOpen,"VideoTours","width=660,height=600,scrollbars,resizable");}
+function openWin(sEvent)
+{var URLtoOpen='';URLtoOpen=sEvent;win1=window.open(URLtoOpen,"Popup_Window","width=660,height=600,scrollbars,resizable");}
+function openWinOptions(sEvent,w,h,options)
+{var URLtoOpen='';URLtoOpen=sEvent;var sParams="width="+w+",height="+h;if(options&&options!="")
+sParams+=","+options;win1=window.open(URLtoOpen,"Popup_Window",sParams);}
+function printWindow(sEvent)
+{var URLtoOpen='';URLtoOpen=sEvent;win1=window.open(URLtoOpen,"Print_Window","width=700,height=650,scrollbars,resizable");}
+function update_start_date(day,mon,year){document.forms[0].elements['day'].options[day-1].selected=true;document.forms[0].elements['month'].options[mon-1].selected=true;for(i=0;i<document.forms[0].elements['year'].options.length;i++){sCode=document.forms[0].elements['year'].options[i].value;if(sCode==year){document.forms[0].elements['year'].options[i].selected=true;}}}
+function confirmMessage(msg)
+{return confirm(msg);}
+function confirmdelete()
+{return confirm("Are you sure you wish to delete this ?");}
+function MM_swapImgRestore(){var i,x,a=document.MM_sr;for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++)x.src=x.oSrc;}
+function MM_findObj(n,d){var p,i,x;if(!d)d=document;if((p=n.indexOf("?"))>0&&parent.frames.length){d=parent.frames[n.substring(p+1)].document;n=n.substring(0,p);}
+if(!(x=d[n])&&d.all)x=d.all[n];for(i=0;!x&&i<d.forms.length;i++)x=d.forms[i][n];for(i=0;!x&&d.layers&&i<d.layers.length;i++)x=MM_findObj(n,d.layers[i].document);return x;}
+function MM_swapImage(){var i,j=0,x,a=MM_swapImage.arguments;document.MM_sr=new Array;for(i=0;i<(a.length-2);i+=3)
+if((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x;if(!x.oSrc)x.oSrc=x.src;x.src=a[i+2];}}
+function MM_preloadImages(){var d=document;if(d.images){if(!d.MM_p)d.MM_p=new Array();var i,j=d.MM_p.length,a=MM_preloadImages.arguments;for(i=0;i<a.length;i++)
+if(a[i].indexOf("#")!=0){d.MM_p[j]=new Image;d.MM_p[j++].src=a[i];}}}
+function MM_findObj(n,d){var p,i,x;if(!d)d=document;if((p=n.indexOf("?"))>0&&parent.frames.length){d=parent.frames[n.substring(p+1)].document;n=n.substring(0,p);}
+if(!(x=d[n])&&d.all)x=d.all[n];for(i=0;!x&&i<d.forms.length;i++)x=d.forms[i][n];for(i=0;!x&&d.layers&&i<d.layers.length;i++)x=MM_findObj(n,d.layers[i].document);if(!x&&document.getElementById)x=document.getElementById(n);return x;}
+function MakeCal(target,mon,year,endFunc)
+{cal=["<!doctype html public \"-//w3c//dtd html 4.0 transitional//en\">\n<html>\n<head>\n<link rel=\"stylesheet\" href=\"styles/obe.css\"></head>\n<body bgcolor=\"#0484A4\">\n\n<font color=\"#000000\">\n<center><table CELLSPACING=0 CELLPADDING=0 ROWS=8 COLS=7 WIDTH=\"200\"  BGCOLOR=\"#FFFFFF\" NOSAVE >\n<tr>\n<td colspan=7 bgcolor=\"#009999\" ALIGN=\"center\"><span class=\"top_navbar\"><b>","</b></span></td>\n</tr>\n<tr ALIGN=CENTER VALIGN=CENTER NOSAVE>\n<td NOSAVE><FONT COLOR=\"red\">S</FONT></td>\n\n<td>M</td>\n\n<td>T</td>\n\n<td>W</td>\n\n<td>T</td>\n\n<td>F</td>\n\n<td><FONT COLOR=\"red\">S</FONT></td>\n</tr>\n\n<tr ALIGN=CENTER VALIGN=CENTER NOSAVE>\n<td NOSAVE>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n</tr>\n\n<tr ALIGN=CENTER VALIGN=CENTER NOSAVE>\n\n<td NOSAVE>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n</tr>\n\n<tr ALIGN=CENTER VALIGN=CENTER NOSAVE>\n\n<td NOSAVE>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n</tr>\n\n<tr ALIGN=CENTER VALIGN=CENTER NOSAVE>\n\n<td NOSAVE>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n\n</tr>\n\n<tr ALIGN=CENTER VALIGN=CENTER NOSAVE>\n<td NOSAVE>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n<td>","</td>\n\n\n</tr>\n\n<tr ALIGN=CENTER VALIGN=CENTER NOSAVE>\n<td NOSAVE>","</td>\n\n<td>","</td>\n\n<td>&nbsp;</td>\n\n<td>&nbsp;</td>\n\n<td>&nbsp;</td>\n\n<td>&nbsp;</td>\n\n<td>&nbsp;</td>\n\n</tr>\n\n<tr BGCOLOR=\"#006699\" ALIGN=CENTER VALIGN=CENTER NOSAVE>\n<td colspan=7>\n<table align=\"center\" width=\"100%\" cellpadding=2 cellspacing=0>\n<tr class=\"calnextprev\">\n<td align=\"left\">","</td>\n<td align=\"right\">","</td>\n</tr>\n</table>\n\n</td>\n</tr>\n</table></center>\n</font>\n</body>\n</html>\n\n\n\n\n\n\n\n\n"];var today=new Date();var leap=IsLeap(year);var maxday=[31,28+leap,31,30,31,30,31,31,30,31,30,31];var theDate=new Date(year,mon-1,1);var firstDay=theDate.getDay()+1;var i,nextY,nextM,prevM,prevY;var monName=[0,"January","February","March","April","May","June","July","August","September","October","November","December"];target.document.close();target.document.open();target.document.write(cal[0]);target.document.write(monName[mon]+"  "+year);for(i=1;i<(cal.length-3);i++)
+{target.document.write(cal[i]);if((i<firstDay)||((i-firstDay+1)>maxday[mon-1]))
+{target.document.write("&nbsp;\n");}
+else
+{if((today.getFullYear()==year)&&(today.getMonth()+1==mon)&&(today.getDate()==(i-firstDay+1)))
+{target.document.write("<a href='JavaScript:self.close();opener."+endFunc+"("+(i-firstDay+1)+","+mon+","+year+");'><b>"+(i-firstDay+1)+"</b></a>\n");}
+else
+{target.document.write("<a href='JavaScript:self.close();opener."+endFunc+"("+(i-firstDay+1)+","+mon+","+year+");'>"+(i-firstDay+1)+"</a>\n");}}}
+nextY=((mon==12)?(year+1):year);nextM=((mon==12)?1:(mon+1));prevY=((mon==1)?(year-1):year);prevM=((mon==1)?12:(mon-1));target.document.write(cal[cal.length-3]);target.document.write("<a href='JavaScript:opener.MakeCal(opener.calWindow,"+prevM+","+prevY+",\""+endFunc+"\");' class='calnextlinks'>prev</a>\n");target.document.write(cal[cal.length-2]);target.document.write("<a href='JavaScript:opener.MakeCal(opener.calWindow,"+nextM+","+nextY+",\""+endFunc+"\");' class='calnextlinks'>next</a>\n");target.document.write(cal[cal.length-1]);target.document.close();}
+function IsLeap(y)
+{if(((y%4)==0)&&(((y%100)!=0)||((y%400)==0)))
+{return 1;}
+else
+{return 0;}}
+function showCal(_function)
+{window.calWindow=window.open("","Calendar","width=250,height=220,resizable=yes");today=new Date()
+cyear=today.getFullYear();cmon=today.getMonth()+1;MakeCal(window.calWindow,cmon,cyear,_function);}
+function newImage(arg){if(document.images){rslt=new Image();rslt.src=arg;return rslt;}}
+function changeImages(){if(document.images&&(preloadFlag==true)){for(var i=0;i<changeImages.arguments.length;i+=2){document[changeImages.arguments[i]].src=changeImages.arguments[i+1];}}}
+function MM_jumpMenu(targ,selObj,restore){eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");if(restore)selObj.selectedIndex=0;}
+function MM_showHideLayers(){var i,p,v,obj,args=MM_showHideLayers.arguments;for(i=0;i<(args.length-2);i+=3)if((obj=MM_findObj(args[i]))!=null){v=args[i+2];if(obj.style){obj=obj.style;v=(v=='show')?'visible':(v='hide')?'hidden':v;}
+obj.visibility=v;}}
+currentLayers=new Array(3);currentLayers[0]=1;currentLayers[1]=1;currentLayers[2]=1;layerPrefixes=new Array('offer','hotdeal','factoid');function rotateLayer(arg)
+{currentlayer=currentLayers[arg];layerprefix=layerPrefixes[arg];MM_showHideLayers(layerprefix+currentlayer,'','hide');if(MM_findObj(layerprefix+(currentlayer+1)))
+{currentlayer++;}
+else
+{currentlayer=1;}
+currentLayers[arg]=currentlayer;MM_showHideLayers(layerprefix+currentlayer,'','show');}
+function ajaxUpdateDiv1(url)
+{var Url=url;ajaxSubmitForm1("userLoginInline");}
+function ajaxUpdateDiv2(url,divName,frm)
+{ajaxUpdateDiv2(url,divName,frm,'');}
+function ajaxUpdateDiv2(url,divName,frm,postTo)
+{var pre=document.URL.substring(0,document.URL.indexOf(':')+3);var Url=pre+document.domain+url;var DivName=divName;ajaxSubmitForm2(Url,DivName,frm,postTo);}
+function loginAjaxHelper(frm,postTo){frm.action=postTo;frm.submit();}
+function ajaxSubmitForm2(URL,divId,frm,postTo)
+{var pURL=URL;var ret=null;var temp="";var xmlhttp=false;if(window.XMLHttpRequest)
+{xmlhttp=false;xmlhttp=new XMLHttpRequest();if(xmlhttp.overrideMimeType){xmlhttp.overrideMimeType('text/xml');}
+if(!xmlhttp){alert('Cannot create XMLHTTP instance');return false;}}
+else if(window.ActiveXObject)
+{xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');}
+xmlhttp.onreadystatechange=function()
+{if(xmlhttp.readyState==4)
+{if(xmlhttp.status==200)
+{var string=xmlhttp.responseText;if(string.indexOf("returned&&&")==-1)
+{document.getElementById(divId).innerHTML=string;if(postTo=='indexhtmhelper.jsp'){document.getElementById(divId).className="searchBox";}
+else
+document.getElementById(divId).className="searchBox2";}
+else{loginAjaxHelper(frm,postTo);}}}};xmlhttp.open("POST",pURL,true);xmlhttp.send(null);}
+function ajaxSubmitForm1(URL)
+{var pURL=URL;var xmlhttp=null;if(window.XMLHttpRequest)
+{xmlhttp=new XMLHttpRequest();}
+else if(window.ActiveXObject)
+{xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');}
+xmlhttp.onreadystatechange=function()
+{if(xmlhttp.readyState==4)
+{if(xmlhttp.status==200)
+{}}};xmlhttp.open("POST",pURL,true);xmlhttp.send(null);}
+function confirmTransfer(url){var answer=confirm("You are now leaving the Shell Vacations Club website. Click 'OK' to proceed ");if(answer)
+{win1=window.open(url);}}
