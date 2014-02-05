@@ -1,6 +1,2 @@
 shellvacations
 ==============
-
-
-===
-Not valid
